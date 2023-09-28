@@ -52,7 +52,7 @@ const SearchBar = () => {
 			window.location.pathname
 		}?${searchParams.toString()}`;
 
-		router.push(newPathName, { scroll: false });
+		router.push(newPathName);
 	};
 
 	return (
