@@ -19,7 +19,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
 			event.value.toLowerCase()
 		);
 
-		router.push(newPathName);
+		router.push(newPathName, { scroll: false });
 	};
 
 	return (

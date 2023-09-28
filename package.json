@@ -15,13 +15,13 @@
 		"react-dom": "latest"
 	},
 	"devDependencies": {
+		"@netlify/plugin-nextjs": "^4.36.1",
 		"@types/node": "latest",
 		"@types/react": "latest",
 		"@types/react-dom": "latest",
 		"autoprefixer": "latest",
 		"postcss": "latest",
 		"tailwindcss": "latest",
-		"typescript": "latest",
-		"@netlify/plugin-nextjs": "4.36.1"
+		"typescript": "latest"
 	}
 }
