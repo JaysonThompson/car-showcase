@@ -1,11 +1,38 @@
-import { CustomFilterProps } from "@/types";
+"use client";
 
-const CustomFilter = ({
-	title,
-	containerStyles,
-	handleClick,
-}: CustomFilterProps) => {
-	return <div>CustomFilter</div>;
+import { Fragment, useState } from "react";
+import { useRouter } from "next/navigation";
+import { CustomFilterProps } from "@/types";
+import { Listbox, Transition } from "@headlessui/react";
+
+import Image from "next/image";
+
+const CustomFilter = ({ title, options }: CustomFilterProps) => {
+	const [selected, setSelected] = useState(options[0]);
+	return (
+		<div className="w-fit">
+			<Listbox value={selected} onChange={(event) => setSelected(event)}>
+				<div className="relative w-fit z-10">
+					<Listbox.Button className="custom-filter__btn">
+						<span className="block truncate">{selected.title}</span>
+						<Image
+							src="/chevron-up-down.svg"
+							width={20}
+							height={20}
+							className="ml-4 object-contain"
+							alt="chevron up down"
+						/>
+					</Listbox.Button>
+					<Transition
+						as={Fragment}
+						leave="transition ease-in duration-100"
+						leaveFrom="opacity-100"
+						leaveTo="opacity-0"
+					></Transition>
+				</div>
+			</Listbox>
+		</div>
+	);
 };
 
 export default CustomFilter;

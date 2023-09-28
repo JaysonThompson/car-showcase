@@ -12,10 +12,15 @@ export interface CustomButtonProps {
 
 export interface CustomFilterProps {
 	title: string;
+	options: OptionProps[];
 	containerStyles?: string;
 	handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
+export interface OptionProps {
+	title: string;
+	value: string;
+}
 export interface SearchBarProps {
 	handleSearch: ChangeEventHandler<HTMLInputElement>;
 }
@@ -39,11 +44,14 @@ export interface CarProps {
 	transmission: string;
 	year: number;
 }
-
 export interface FilterProps {
 	manufacturer: string;
 	year: number;
 	fuel: string;
 	limit: number;
 	model: string;
+}
+
+export interface HomeProps {
+	searchParams: FilterProps;
 }
