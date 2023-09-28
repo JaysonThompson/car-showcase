@@ -21,6 +21,7 @@
 		"autoprefixer": "latest",
 		"postcss": "latest",
 		"tailwindcss": "latest",
-		"typescript": "latest"
+		"typescript": "latest",
+		"@netlify/plugin-nextjs": "4.36.1"
 	}
 }
